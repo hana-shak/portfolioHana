@@ -1,0 +1,126 @@
+// Tablets and Smaller
+@media(max-width:800px){
+    #header-home{
+        height:30rem;
+
+        .header-content{
+            padding-top:5%;
+        }
+    }
+    #work-a{
+        .items{
+            grid-template-columns: 1fr;
+            #iframeFeature{
+                width:100%;
+                height:100%
+            }
+        }
+    }
+}
+
+// Smart Mobiles
+@media(max-width:500px){
+    .main-nav{
+        flex-direction:column;
+        align-items:center;
+
+        li{
+           padding:1rem;
+        }
+
+
+    }
+    #header{
+        &-home{
+            height:10rem;
+            background: $bg-image no-repeat 20% 30% / cover;
+            border-bottom: 2px $main-color solid;
+            .header-content{
+               display:none;}
+        }
+
+        &-inner{
+            height:10rem;
+        }
+    }
+    
+
+    // Grid Stack Columns
+    #home-a .specials,
+    #home-b .stats,
+    #home-c .process{
+        grid-template-columns: 1fr;
+    }
+
+    #home{
+        &-a{
+            .specials div{
+                padding:1rem;
+                border-bottom:1px $medium-color dotted;
+                &:last-child{
+                    border:none;
+                }
+            }
+        }
+    }
+
+    #about{
+        &-a{
+            .about-info{
+                grid-template-columns: 0fr 2fr;
+            }
+        }
+        &-c{
+            .about-logos{
+                grid-template-columns:1fr;
+                justify-items: center;
+            }
+        }
+    }
+
+    #work{
+        &-a{
+            .items{
+                grid-template-columns: 1fr;
+            }
+            #iframeFeature{
+                width:100%;
+                height:100%
+            }
+        }
+    }
+
+    #contact{
+        &-a{
+           .text-fields{
+               display:grid;
+               grid-template-areas: 
+               'name'
+               'email'
+               'subject' 
+               'phone'
+               'message';
+            }
+        }
+
+
+        &-b{
+          .contact-info{
+            grid-template-columns: 1fr;
+           }
+        }
+    }
+
+    #main-footer{
+        .footer-content{
+            flex-direction: column;
+            height:5.5rem;
+            .social a{
+                padding-bottom: .09rem;
+            }
+        }
+    }
+    
+
+
+}

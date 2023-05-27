@@ -1,0 +1,121 @@
+
+.container{
+    max-width:$website-width;
+    overflow:hidden;
+    margin:auto;
+    padding:0 1.5rem;
+}
+
+%btn-shared{
+    display:inline-block;
+    padding:0.8rem 2rem;
+    transition:all 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn{
+    &-main{
+        @extend %btn-shared;
+        background: $main-color;
+        color:#333;
+    }
+
+    &-light{
+        @extend %btn-shared;
+        background:$light-color;
+        color:#333;
+    }
+    &-dark{
+        @extend %btn-shared;
+        background:$dark-color;
+        color:#f4f4f4;
+    }
+    
+}
+
+// For any buttons, links, inputs with class btn-sth
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover{
+    background-color: $main-color;
+}
+
+.lead{
+    font-size:1.3rem;
+    margin-bottom:2rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+// Padding Vertical
+.py{
+    &-1{
+        padding:1rem 0px;
+    }
+    &-2{
+        padding:2rem 0px;
+    }
+    &-3{
+        padding:3rem 0px;
+    }
+    &-4{
+        padding:4rem 0px;
+    }
+}
+
+// Margin Vertical
+.my{
+    &-1{
+        margin:1rem 0px;
+    }
+    &-2{
+        margin:2rem 0px;
+    }
+    &-3{
+        margin:3rem 0px;
+    }
+    &-4{
+        margin:4rem 0px;
+    }
+}
+
+// Backgrounds
+.bg{
+    &-main{
+        background:$main-color;
+        color:set-text-color($main-color);
+    }
+    &-medium{
+        background:$medium-color;
+        color:set-text-color($medium-color);
+    }
+    &-light{
+        background:$light-color;
+        color:set-text-color($light-color);
+    }
+    &-dark{
+        background:$dark-color;
+        color:set-text-color($dark-color);
+    }
+}
+
+// section-title
+.section-title{
+    display:block;
+    font-size:2rem;
+    padding-bottom:0.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+// Bottom Line
+.bottom-line{
+    width:3rem;
+    height:2px;
+    background:$main-color;
+    display:block;
+    margin:0 auto 1rem auto;
+}
